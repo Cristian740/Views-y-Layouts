@@ -8,11 +8,8 @@ import android.view.View
 
 class ProfileActivity : AppCompatActivity() {
     companion object {
-        // val ARG_USER_ID = "ARG_USER_ID"
-        //fun startactivity (context: Context, id:Int){
         fun startactivity (context: Context){
             val intent = Intent(context , ProfileActivity::class.java)
-            //intent.putExtra(ARG_USER_ID,id)
             context.startActivity(intent)
         }
     }
@@ -23,7 +20,6 @@ class ProfileActivity : AppCompatActivity() {
 
     fun salir(view: View){
         val intent = Intent(this , MainActivity::class.java)
-        //intent.putExtra(ARG_USER_ID,id)
         this.startActivity(intent)
     }
 }

@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun iniciar(view: View){
-        //ProfileActivity.startactivity(this,8)
         ProfileActivity.startactivity(this)
     }
 }
