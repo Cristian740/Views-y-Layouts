@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.hp.proyecto1.ProfileActivity">
+
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:id="@+id/notificaciones"
+        android:src="@drawable/ic_notifications"
+        android:tint="@color/colorAccent"
+        android:background="@drawable/forma_boton_izq"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/menu"
+        android:src="@drawable/ic_menu"
+        android:tint="@color/colorAccent"
+        android:background="@drawable/forma_boton_der"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/mensaje"
+        android:src="@drawable/ic_chat"
+        android:tint="@color/colorAccent"
+        android:background="@drawable/forma_boton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/salir"
+        android:src="@drawable/ic_power"
+        android:tint="@color/colorAccent"
+        android:onClick="salir"
+        android:background="@drawable/forma_boton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resumen_perfil"
+        android:layout_below="@+id/notificaciones"
+        android:layout_toRightOf="@id/notificaciones"
+        android:layout_toLeftOf="@id/menu"
+        android:background="@color/ColorPrimaryTextColor"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/person"
+            android:src="@drawable/ic_person"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_nombre"
+            android:text="Nombre: "
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/person"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/texto_nombre"
+            android:text="Cristian Rojas"
+            android:textStyle="italic"
+            android:layout_toRightOf="@+id/person"
+            android:layout_below="@id/label_nombre"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_celular"
+            android:text="Celular: "
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/person"
+            android:layout_below="@+id/texto_nombre"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/texto_celular"
+            android:text="71256636"
+            android:textStyle="italic"
+            android:layout_toRightOf="@+id/person"
+            android:layout_below="@id/label_celular"
+            />
+
+        <RatingBar
+            android:id="@+id/simpleRatingBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texto_celular"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:numStars="5"
+            android:rating="4"
+            />
+
+        <SeekBar
+            android:id="@+id/SeekBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:max="200"
+            android:progress="50"
+            android:layout_below="@id/simpleRatingBar"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>
